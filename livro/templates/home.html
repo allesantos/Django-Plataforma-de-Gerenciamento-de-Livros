@@ -16,7 +16,7 @@
         {% for livro in livros %}
         <div class="col-md">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+                <img width="100%" src="{{livro.img.url}}">
                 <div class="card-body">
                     <h5 class="card-title">{{livro.nome}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{livro.autor}}</h6>
@@ -37,7 +37,7 @@
                     <h6 style="display: inline;font-weight: bold" class="card-subtitle mb-2 text-muted">Disponível</h6>
                     {% endif %}
                     <br><br>
-                    <a href="{% url 'ver_livros' livro.id %}" class="btn btn-primary">Acessar</a>
+                    <a href="{% url 'ver_livros' livro.id %}" class="btn btn-dark">Acessar</a>
                 </div>
             </div>
         </div>
