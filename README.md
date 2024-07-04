@@ -1,2 +1,3 @@
-# Django-Biblioteca
+# Projeto em Django - Sistema de Gerenciamento de Livros Alleart
  
+Este é um projeto de uma plataforma de gerenciamento de livros onde é possível o usuário se cadastrar, fazer login e publicar informações sobre os livros que ele possui. Também é possível este usuário emprestar seus livros para outros usuários cadastrados assim como também fazer o registro da devolução e avaliar o estado do livro devolvido. Este projeto ainda está em sua fase beta, portanto será feito no futuro ainda alguns outros aprimoramentos, correções e mais features. É possível acessar o sistema através do link https://allesantos.pythonanywhere.com/auth/cadastro/ . Está funcional, então caso queira testa-lo, basta criar um cadastro, depois fazer login e começar publicar informações de livros.
