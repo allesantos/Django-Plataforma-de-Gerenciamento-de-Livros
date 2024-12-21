@@ -1,4 +1,4 @@
-# Allebook - Plataforma de Gerenciamento de Livros
+# Alleart - Plataforma de Gerenciamento de Livros
  
 Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com Django. 
 
@@ -13,10 +13,11 @@ Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com
 - [Licença](#Licença)
 
 ## Descrição
-**Allebook** é uma plataforma que permite que os usuários se cadastrem, façam login e publiquem informações sobre os livros que possuem. Além disso, os usuários podem emprestar seus livros fisicamente para outros usuários cadastrados ou visitantes, registrar devoluções e avaliar o estado dos livros devolvidos.
+**Alleart** é uma plataforma que permite que os usuários se cadastrem, façam login e publiquem informações sobre os livros que possuem. Além disso, os usuários podem emprestar seus livros fisicamente para outros usuários cadastrados ou visitantes, registrar devoluções e avaliar o estado dos livros devolvidos.
 **Status do projeto:** Fase Beta — funcionalidades adicionais e melhorias estão planejadas para versões futuras.
 
-
+## Recursos
+- Cadastro e login de usuários.
 
 Na imagem abaixo, temos alguns exemplos de livros publicados por um usuário.
 
