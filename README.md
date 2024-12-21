@@ -24,7 +24,7 @@ Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com
 - Registro de devoluções com avaliação do estado do livro.
 - Interface amigável e responsiva.
 
-## Tecnologias Utilizadas
+## Tecnologias
 - __Backend:__ Django 4.x
 - __Banco de Dados:__ SQLite (padrão)
 - __Frontend:__ HTML, CSS, Bootstrap
