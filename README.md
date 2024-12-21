@@ -116,4 +116,25 @@ Note que não será possível avaliar a devolução de um livro caso o usuário 
 
 <img src = "https://github.com/allesantos/allesantos/blob/main/imagens/Biblioteca-Django/05c.png">
 
+## Contribuição
+Sinta-se à vontade para contribuir com este projeto. Siga estas etapas:
+
+1. Faça um fork do repositório.
+
+2. Crie uma nova branch para sua feature/bugfix:
+
+    ```
+    git checkout -b minha-feature
+    ```
+
+3. Envie suas alterações:
+
+    ```
+    git push origin minha-feature
+    ```
+
+4. Abra um Pull Request.
+
+## Licença
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais informações.
 
