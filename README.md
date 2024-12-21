@@ -14,10 +14,21 @@ Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com
 
 ## Descrição
 **Alleart** é uma plataforma que permite que os usuários se cadastrem, façam login e publiquem informações sobre os livros que possuem. Além disso, os usuários podem emprestar seus livros fisicamente para outros usuários cadastrados ou visitantes, registrar devoluções e avaliar o estado dos livros devolvidos.
+
 **Status do projeto:** Fase Beta — funcionalidades adicionais e melhorias estão planejadas para versões futuras.
 
 ## Recursos
 - Cadastro e login de usuários.
+- Publicação de informações sobre livros.
+- Empréstimo de livros para outros usuários ou visitantes.
+- Registro de devoluções com avaliação do estado do livro.
+- Interface amigável e responsiva.
+
+## Tecnologias Utilizadas
+- __Backend:__ Django 4.x
+- __Banco de Dados:__ SQLite (padrão)
+- __Frontend:__ HTML, CSS, Bootstrap
+- __Outras ferramentas:__ HTML, CSS, Bootstrap
 
 Na imagem abaixo, temos alguns exemplos de livros publicados por um usuário.
 
