@@ -28,8 +28,52 @@ Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com
 - __Backend:__ Django 4.x
 - __Banco de Dados:__ SQLite (padrão)
 - __Frontend:__ HTML, CSS, Bootstrap
-- __Outras ferramentas:__ HTML, CSS, Bootstrap
 
+## Pré-requisitos
+Antes de iniciar, certifique-se de ter os seguintes itens instalados:
+- Python 3.8 ou superior
+- pip (gerenciador de pacotes do Python)
+- Virtualenv (recomendado para isolamento do ambiente)
+- Git
+
+## Instalação
+1. Clone o repositório para sua máquina local:
+
+    ```
+    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    cd nome-do-repositorio
+    ```
+
+2. Crie e ative um ambiente virtual:
+
+    ```
+    python -m venv venv
+    source venv/bin/activate  # No Windows: venv\Scripts\activate
+    ```
+
+3. Instale as dependências do projeto:
+
+    ```
+    pip install -r requirements.txt
+    ```
+
+4. Execute as migrações do banco de dados:
+
+    ```
+    python manage.py migrate
+    ```
+
+5. Inicie o servidor de desenvolvimento:
+
+    ```
+    python manage.py runserver
+    ```
+
+6. Acesse o sistema em http://127.0.0.1:8000/ no seu navegador.
+
+## Uso
+
+1. Para utilizar o sistema é necessário realizar um cadastro, registrando apenas usuário, email e senha.
 Na imagem abaixo, temos alguns exemplos de livros publicados por um usuário.
 
 <img src = "https://github.com/allesantos/allesantos/blob/main/imagens/Biblioteca-Django/01.png">
