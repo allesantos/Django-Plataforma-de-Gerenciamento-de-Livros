@@ -1,6 +1,21 @@
-# Projeto em Django - Sistema de Gerenciamento de Livros
+# Allebook - Plataforma de Gerenciamento de Livros
  
-Este é um projeto de uma plataforma de gerenciamento de livros onde é possível o usuário se cadastrar, fazer login e publicar informações sobre os livros que ele possui. Também é possível este usuário emprestar seus livros de forma física para outros usuários cadastrados ou não cadastrados (visitantes), assim como também fazer o registro da devolução e avaliar o estado do livro devolvido. Este projeto ainda está em sua fase beta, portanto será feito no futuro ainda alguns outros aprimoramentos, correções e mais features. É possível acessar o sistema através do link https://allesantos.pythonanywhere.com/auth/cadastro/ . Está funcional, então caso queira testa-lo, basta criar um cadastro, depois fazer login e começar publicar informações de livros.
+Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com Django. 
+
+## Índice
+- [Descrição](#Descrição)
+- [Recursos](#Recursos)
+- [Tecnologias Utilizadas](#Tecnologias)
+- [Pré-requisitos](#Pré-requisitos)
+- [Instalação](#Instalação)
+- [Uso](#Uso)
+- [Contribuição](#Contribuição)
+- [Licença](#Licença)
+
+## Descrição
+**Allebook** é uma plataforma que permite que os usuários se cadastrem, façam login e publiquem informações sobre os livros que possuem. Além disso, os usuários podem emprestar seus livros fisicamente para outros usuários cadastrados ou visitantes, registrar devoluções e avaliar o estado dos livros devolvidos.
+**Status do projeto:** Fase Beta — funcionalidades adicionais e melhorias estão planejadas para versões futuras.
+
 
 
 Na imagem abaixo, temos alguns exemplos de livros publicados por um usuário.
