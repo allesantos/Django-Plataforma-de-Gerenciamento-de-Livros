@@ -67,8 +67,7 @@ Antes de iniciar, certifique-se de ter os seguintes itens instalados:
 
 6. Quando for acessar a página que possui mais informações sobre um dos livros publicados, nela é possível ainda alterar ou excluir o livro.
 
-<img src = "https://github.com/allesantos/allesantos/blob/main/imagens/Biblioteca-Django/07.png">
-
+<img src = "https://github.com/allesantos/allesantos/blob/main/imagens/Biblioteca-Django/08.png">
 
 7. Quando for registrar a devolução de um livro que havia antes emprestado para um usuário, é possível avaliar o estado de como foi devolvido o livro. A avaliação será classificada em forma de estrelas.
 
