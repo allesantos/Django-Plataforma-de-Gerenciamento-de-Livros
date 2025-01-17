@@ -1,4 +1,4 @@
-# Alleart - Plataforma de Gerenciamento de Livros
+# Casa dos Livros - Plataforma de Gerenciamento de Livros
  
 Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com Django. 
 
@@ -7,15 +7,13 @@ Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com
 - [Recursos](#Recursos)
 - [Tecnologias Utilizadas](#Tecnologias)
 - [Pré-requisitos](#Pré-requisitos)
-- [Instalação](#Instalação)
 - [Uso](#Uso)
+- [Instalação](#Instalação)
 - [Contribuição](#Contribuição)
 - [Licença](#Licença)
 
 ## Descrição
-**Alleart** é uma plataforma que permite que os usuários se cadastrem, façam login e publiquem informações sobre os livros que possuem. Além disso, os usuários podem emprestar seus livros fisicamente para outros usuários cadastrados ou visitantes, registrar devoluções e avaliar o estado dos livros devolvidos.
-
-**Status do projeto:** Fase Beta — funcionalidades adicionais e melhorias estão planejadas para versões futuras.
+**Casa dos Livros** é uma plataforma que permite que os usuários se cadastrem, façam login e publiquem informações sobre os livros que possuem. Além disso, os usuários podem emprestar seus livros fisicamente para outros usuários cadastrados ou visitantes, registrar devoluções e avaliar o estado dos livros devolvidos.
 
 ## Recursos
 - Cadastro e login de usuários.
@@ -25,9 +23,9 @@ Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com
 - Interface amigável e responsiva.
 
 ## Tecnologias
-- __Backend:__ Django 4.x
+- __Backend:__ Django 5.x
 - __Banco de Dados:__ SQLite (padrão)
-- __Frontend:__ HTML, CSS, Bootstrap
+- __Frontend:__ HTML, CSS, Bootstrap e JavaScript
 
 ## Pré-requisitos
 Antes de iniciar, certifique-se de ter os seguintes itens instalados:
@@ -35,41 +33,6 @@ Antes de iniciar, certifique-se de ter os seguintes itens instalados:
 - pip (gerenciador de pacotes do Python)
 - Virtualenv (recomendado para isolamento do ambiente)
 - Git
-
-## Instalação
-1. Clone o repositório para sua máquina local:
-
-    ```
-    git clone https://github.com/seu-usuario/nome-do-repositorio.git
-    cd nome-do-repositorio
-    ```
-
-2. Crie e ative um ambiente virtual:
-
-    ```
-    python -m venv venv
-    source venv/bin/activate  # No Windows: venv\Scripts\activate
-    ```
-
-3. Instale as dependências do projeto:
-
-    ```
-    pip install -r requirements.txt
-    ```
-
-4. Execute as migrações do banco de dados:
-
-    ```
-    python manage.py migrate
-    ```
-
-5. Inicie o servidor de desenvolvimento:
-
-    ```
-    python manage.py runserver
-    ```
-
-6. Acesse o sistema em http://127.0.0.1:8000/ no seu navegador.
 
 ## Uso
 Na imagem abaixo, temos alguns exemplos de livros publicados por um usuário.
@@ -115,6 +78,41 @@ Na imagem abaixo, temos alguns exemplos de livros publicados por um usuário.
 Note que não será possível avaliar a devolução de um livro caso o usuário ainda não tenha devolvido para você, sendo assim, o botão "Avaliar" será visualizado, porém indisponível para avaliação.
 
 <img src = "https://github.com/allesantos/allesantos/blob/main/imagens/Biblioteca-Django/05c.png">
+
+## Instalação
+1. Clone o repositório para sua máquina local:
+
+    ```
+    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    cd nome-do-repositorio
+    ```
+
+2. Crie e ative um ambiente virtual:
+
+    ```
+    python -m venv venv
+    source venv/bin/activate  # No Windows: venv\Scripts\activate
+    ```
+
+3. Instale as dependências do projeto:
+
+    ```
+    pip install -r requirements.txt
+    ```
+
+4. Execute as migrações do banco de dados:
+
+    ```
+    python manage.py migrate
+    ```
+
+5. Inicie o servidor de desenvolvimento:
+
+    ```
+    python manage.py runserver
+    ```
+
+6. Acesse o sistema em http://127.0.0.1:8000/ no seu navegador.
 
 ## Contribuição
 Sinta-se à vontade para contribuir com este projeto. Siga estas etapas:
