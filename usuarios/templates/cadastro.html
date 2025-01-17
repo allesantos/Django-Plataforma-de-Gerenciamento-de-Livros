@@ -1,12 +1,20 @@
 {% extends 'base.html' %}
+{% load static %} 
 
-{% block 'titulo' %} Cadastro {% endblock %}
+{% block 'head' %}
+<!-- Inclui o arquivo CSS específico para a página de cadastro de usuários -->
+<link rel="stylesheet" href="{% static 'css/usuarios.css'%}">
+{% endblock 'head' %}
 
-{% block 'conteudo' %}
+{% block 'titulo' %} Cadastro {% endblock %} <!-- Define o título da página como 'Cadastro' -->
 
-<div class="container">
+{% block 'conteudo' %} <!-- Bloco de conteúdo da página -->
+
+<!-- Container para o conteúdo principal da página -->
+<div class="container-fluid">
     <br>
 
+    <!-- Exibe mensagens de status dependendo do valor de 'status' -->
     {% if status == '1' %}
     <div class="alert alert-danger" role="alert">
         Nome e email não podem estar vazios!
@@ -37,32 +45,47 @@
     </div>
     {% endif %}
 
+    <!-- Linha que divide as colunas -->
     <div class="row">
-        <div class="col-md-3"></div>
+        <!-- Coluna esquerda: formulário de cadastro -->
+        <div class="col-md-6 col-12 d-flex justify-content-center">
+            <div class="cont-cadastro">
+                <!-- Título do formulário -->
+                <h2 class="mb-4 text-center">Cadastre-se</h2>
 
-        <div class="col-md">
-            <h1>Cadastre-se</h1>
-            <hr>
+                <!-- Formulário de cadastro -->
+                <form method="POST" action="{% url 'validar_cadastro' %}">
+                    {% csrf_token %} <!-- Token CSRF para proteção contra ataques -->
+                    <!-- Campo de entrada para o nome do usuário -->
+                    <label>Nome</label>
+                    <input name="nome" class="form-control" type="text" placeholder="Nome...">
+                    <br>
 
-            <form method="POST" action="{% url 'validar_cadastro' %}"> {% csrf_token %}
-                <label>Nome</label>
-                <input name="nome" class="form-control" type="text" placeholder="Nome...">
-                <br>
+                    <!-- Campo de entrada para o email do usuário -->
+                    <label>Email</label>
+                    <input name="email" class="form-control" type="text" placeholder="Email...">
+                    <br>
 
-                <label>Email</label>
-                <input name="email" class="form-control" type="text" placeholder="Email...">
-                <br>
-                <label>Senha</label>
-                <input name="senha" class="form-control" type="password" placeholder="Senha...">
-                <br>
-
-                <input class="btn btn-info btn-lg" type="submit" value="Enviar">
-                <a href="{% url 'login' %}" class="btn btn-warning btn-lg">Login</a>
-            </form>
+                    <!-- Campo de entrada para a senha do usuário -->
+                    <label>Senha</label>
+                    <input name="senha" class="form-control" type="password" placeholder="Senha...">
+                    
+                    <!-- Botões para envio do formulário ou redirecionamento ao login -->
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <input class="btn btn-info" type="submit" value="Enviar"> <!-- Botão para enviar o formulário -->
+                        <a href="{% url 'login' %}" class="btn btn-warning">Login</a> <!-- Link para página de login -->
+                    </div>
+                </form>
+            </div>
         </div>
 
-        <div class="col-md-3"></div>
+        <!-- Coluna direita: imagem ilustrativa -->
+        <div class="col-md-6 col-12 bg-main2 d-flex justify-content-center align-items-center">
+            <!-- Imagem de ilustração -->
+            <img src="{% static 'imagens/ilustracao1a.png' %}" alt="Ilustração" class="img-fluid">
+        </div>
+
     </div>
 </div>
 
-{% endblock %}
+{% endblock %} 

@@ -1,0 +1,56 @@
+/* Importação da fonte personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilo do título principal da página */
+.titulo-pagina {
+    font-family: 'Noto Sans Display', serif; /* Fonte personalizada */
+    text-align: center; /* Centraliza o texto */
+    font-weight: 700; /* Texto em negrito */
+    font-size: 30px; /* Tamanho maior para destaque */
+}
+
+/* Estilo do cartão */
+.cartao {
+    background-color: #c7bfc2; /* Cor de fundo cinza claro */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 3%; /* Espaçamento superior */
+    border-radius: 20px; /* Cantos arredondados */
+    box-shadow: 4px 4px 8px #5c585a; /* Sombra para criar profundidade */
+}
+
+/* Estilos responsivos para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+
+    /* Título principal da página em telas menores */
+    .titulo-pagina {
+        font-family: 'Noto Sans Display', serif; /* Mantém a mesma fonte */
+        text-align: center; /* Centraliza o texto */
+        font-weight: 700; /* Texto em negrito */
+        font-size: 27px; /* Reduz o tamanho da fonte para melhor ajuste */
+        margin-bottom: 20px; /* Espaçamento inferior */
+    }
+
+    /* Cartões em telas menores */
+    .cartao {
+        padding: 15px; /* Reduz o espaçamento interno */
+        margin-top: 2%; /* Reduz o espaçamento superior */
+        margin-bottom: 15px; /* Espaçamento menor entre os cartões */
+    }
+
+    /* Estilo para subtítulos dentro dos cartões */
+    .titulo h3 {
+        font-size: 20px; /* Reduz o tamanho da fonte para melhor encaixe */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* Estilo para os rótulos (labels) dentro do cartão */
+    .body label {
+        font-size: 16px; /* Reduz o tamanho da fonte para maior legibilidade */
+    }
+
+    /* Ícones dentro dos rótulos em telas menores */
+    .body label svg {
+        width: 16px; /* Reduz o tamanho da largura dos ícones */
+        height: 16px; /* Reduz o tamanho da altura dos ícones */
+    }
+}

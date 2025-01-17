@@ -1,0 +1,180 @@
+/* Importa a fonte personalizada para uso geral no projeto */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Configuração básica de layout para a página */
+html, body {
+    height: 100%; /* Garante que a altura da página ocupe 100% da janela */
+    margin: 0; /* Remove margens padrão que poderiam causar rolagem */
+}
+
+/* Estilo para os cabeçalhos principais */
+h1 {
+    font-family: 'Noto Sans Display', serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso intermediário da fonte */
+    font-size: 27px; /* Tamanho do texto */
+}
+
+/* Estilo para parágrafos */
+p {
+    font-family: 'Noto Sans Display', serif; /* Fonte personalizada */
+}
+
+/* Configuração do container principal */
+main {
+    min-height: 78.6vh; /* Garante que o container principal ocupe boa parte da altura da tela */
+}
+
+/* Configuração de layout para linhas customizadas */
+.custom-row {
+    display: flex; /* Usa flexbox para alinhamento */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 100px; /* Espaçamento entre colunas */
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove padding interno */
+}
+
+/* Configuração para imagens em colunas customizadas */
+.custom-image-column2 img {
+    max-width: 500px; /* Define largura máxima */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Evita distorção ao redimensionar */
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove padding interno */
+    display: block; /* Remove comportamento inline padrão */
+}
+
+/* Estilo para container principal com fundo primário */
+.container-fluid.bg-primary.text-white.py-6 {
+    margin: -70px 0 0 0; /* Remove margens externas */
+    padding: 0; /* Remove padding interno */
+}
+
+/* Configuração para colunas de texto customizadas */
+.custom-text-column {
+    max-height: 100%; /* Impede que imagens excedam a altura disponível */
+    width: auto; /* Ajusta largura automaticamente */
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Organiza elementos verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 15px; /* Espaçamento entre os elementos */
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove padding interno */
+}
+
+/* Estilo para containers flexíveis */
+.container-fluid.text-white.mt-5.mb-0 {
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    flex-wrap: wrap; /* Permite quebra de linha, se necessário */
+    padding: 20px 0; /* Define padding vertical */
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+/* Configuração para colunas de imagem */
+.custom-image-column {
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza itens horizontalmente */
+    flex-wrap: wrap; /* Permite quebra de linha, se necessário */
+    gap: 20px; /* Espaçamento entre itens */
+    align-items: center; /* Alinha verticalmente */
+    width: 90%; /* Define largura relativa */
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* Ajuste para setas do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Corrige alinhamento exato */
+    z-index: 10; /* Garante sobreposição acima do conteúdo */
+}
+
+/* Personaliza a posição das setas */
+.carousel-control-prev {
+    left: -90px; /* Move a seta esquerda para fora */
+}
+
+.carousel-control-next {
+    right: -90px; /* Move a seta direita para fora */
+}
+
+/* Estiliza os ícones das setas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 100%; /* Usa o tamanho total do ícone */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border-radius: 50%; /* Deixa os botões circulares */
+    width: 3rem; /* Define tamanho dos ícones */
+    height: 3rem;
+}
+
+/* Oculta imagens placeholder do carrossel em telas grandes */
+.carousel-placeholder {
+    display: none; /* Esconde imagens de substituição */
+}
+
+/* Estilos responsivos para dispositivos menores */
+@media (max-width: 768px) {
+    body {
+        overflow-y: hidden; /* Remove rolagem vertical */
+    }
+
+    .container-fluid.bg-primary.text-white.py-6 {
+        padding-top: 50px; /* Adiciona padding superior */
+        padding-bottom: 0; /* Remove padding inferior */
+        margin-bottom: 0; /* Remove margem inferior */
+    }
+
+    .custom-row {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza itens horizontalmente */
+        text-align: center; /* Centraliza texto */
+    }
+
+    .custom-image-column2 {
+        display: none; /* Esconde imagens em colunas específicas */
+    }
+
+    .custom-text-column {
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        height: 200px; /* Ajusta altura */
+    }
+
+    .custom-text-column h1 {
+        font-size: 1.6rem; /* Ajusta tamanho do título */
+        margin-top: -60px; /* Ajusta margens superiores */
+        margin-bottom: 10px; /* Define margem inferior */
+    }
+
+    .custom-text-column p {
+        font-size: 1rem; /* Tamanho do texto menor */
+        margin-bottom: 20px; /* Espaçamento inferior */
+    }
+
+    .custom-text-column .btn {
+        font-size: 1rem; /* Texto menor no botão */
+        padding: 10px 20px; /* Ajusta padding interno */
+    }
+
+    .custom-image-column img {
+        width: 100%; /* Imagem ocupa toda a largura */
+        height: auto; /* Mantém proporção */
+        padding: 30px; /* Adiciona espaçamento interno */
+    }
+
+    .carousel {
+        display: none !important; /* Esconde carrossel */
+    }
+
+    .carousel-placeholder {
+        display: block !important; /* Exibe imagem de substituição */
+        width: 100%; /* Ocupa toda a largura disponível */
+        max-height: 100vh; /* Limita altura máxima */
+        object-fit: cover; /* Evita distorção da imagem */
+    }
+}

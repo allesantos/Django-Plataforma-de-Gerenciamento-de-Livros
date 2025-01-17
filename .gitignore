@@ -1,0 +1,16 @@
+# Ignorar arquivos temporários
+*.log
+*.tmp
+
+# Ignorar diretórios
+/node_modules
+/dist
+venv/
+
+# Ignorar migrações (opcional)
+*/migrations/*.pyc
+*/migrations/*.log
+
+
+# Ignorar arquivos de cache do Python
+__pycache__/

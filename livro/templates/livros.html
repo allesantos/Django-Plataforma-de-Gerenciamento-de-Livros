@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %} 
+
+<!-- Inclui o arquivo CSS personalizado para estilizar a página -->
+<link rel="stylesheet" href="{% static 'css/livros.css' %}"> 
+      
+{% endblock %}
+
+{% block 'conteudo' %}
+
+<div class="container">
+    <br>
+
+    <!-- Exibe uma mensagem de boas-vindas personalizada se o nome do usuário estiver disponível -->
+    {% if usuario_nome %}
+    <div>
+        <h1 class="welcome-heading">
+            <span style="color: #333;">Bem-vindo, </span> {{ usuario_nome }}
+            <span style="color: #333;">, aqui estão os seus livros!</span>
+        </h1>
+    </div>
+    {% endif %}
+    
+
+    <!-- Exibe uma mensagem de sucesso ao cadastrar uma categoria -->
+    {% if status_categoria == '1' %}
+    <div class="alert alert-success" role="alert">
+        Categoria cadastrada com sucesso!
+    </div>
+    {% endif %}
+
+    <!-- Exibe os livros do usuário como uma lista de cards -->
+    <div class="row d-flex flex-wrap justify-content-start">
+        {% for livro in livros %}
+        <div class="card-container">
+            <div class="card card-custom">
+                <!-- Mostra a imagem do livro -->
+                <img src="{{livro.img.url}}">
+                <div class="card-body">
+                    <!-- Exibe o nome e o autor do livro -->
+                    <h5 class="card-title">{{livro.nome}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{livro.autor}}</h6>
+
+                    <!-- Verifica se o livro está emprestado -->
+                    {% if livro.emprestado %}
+                    <!-- Ícone de check para livros emprestados -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-check-lg" viewBox="0 0 16 16">
+                        <path
+                            d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                    </svg>
+                    <h6 style="display: inline;font-weight: bold;" class="card-subtitle mb-2 text-muted">Emprestado</h6>
+    
+                    {% else %}
+                    <!-- Ícone de mais para livros disponíveis -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-plus-lg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                    </svg>
+                    <h6 style="display: inline;font-weight: bold" class="card-subtitle mb-2 text-muted">Disponível</h6>
+                    {% endif %}
+
+                    <br><br>
+                    <!-- Link para acessar os detalhes do livro -->
+                    <a href="{% url 'ver_livros' livro.id %}" class="btn btn-dark">Acessar</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

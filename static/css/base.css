@@ -1,0 +1,162 @@
+/* Configuração para o layout ocupar toda a altura da página */
+html, body {
+  height: 100%; /* Faz o corpo da página ocupar 100% da altura disponível */
+  margin: 0; /* Remove as margens padrão do navegador */
+  display: flex;
+  flex-direction: column; /* Define a estrutura do layout em formato de coluna */
+}
+
+/* Estilização do conteúdo principal */
+main {
+  flex: 1; /* Expande o conteúdo principal para preencher o espaço restante */
+  margin-top: 60px; /* Ajusta o espaço para compensar a altura da navbar fixa */
+}
+
+/* Navbar fixa no topo */
+.navbar {
+  position: fixed; /* Mantém a navbar sempre visível no topo */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura da página */
+  z-index: 1030; /* Garante que a navbar fique acima de outros elementos */
+}
+
+/* Botão "Menu" dentro da navbar */
+.navbar .dropdown .btn-danger {
+  background-color: #0d6efd !important; /* Cor azul personalizada */
+  font-weight: bold; /* Texto em negrito */
+  border: none; /* Remove bordas padrão */
+  color: #fff; /* Texto branco */
+}
+
+.navbar .dropdown .btn-danger:hover {
+  background-color: #0056b3 !important; /* Azul mais escuro ao passar o mouse */
+  color: #fff; /* Mantém o texto branco */
+}
+
+/* Remove contorno e borda do botão dropdown ao ser clicado */
+.navbar .dropdown-toggle:focus,
+.navbar .dropdown-toggle:active {
+  outline: none !important; /* Remove contorno de foco padrão */
+  box-shadow: none !important; /* Remove sombras */
+  border: none !important; /* Remove bordas */
+}
+
+/* Estilo padrão para itens do menu dropdown */
+.navbar .dropdown-menu .dropdown-item {
+  background-color: #fff !important; /* Fundo branco */
+  color: #343a40; /* Texto cinza-escuro */
+  font-weight: normal; /* Texto sem negrito */
+  transition: all 0.3s ease; /* Suaviza as transições de estilo */
+  border: none; /* Remove bordas */
+}
+
+/* Estilo ao passar o mouse nos itens do menu dropdown */
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #0d6efd !important; /* Fundo azul */
+  color: #fff !important; /* Texto branco */
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo para itens não clicáveis no menu dropdown */
+.navbar .dropdown-menu .dropdown-item:not([href]):not([data-toggle]) {
+  background-color: #fff !important; /* Fundo branco */
+  color: #6c757d; /* Texto cinza */
+  font-weight: bold; /* Texto em negrito */
+  pointer-events: none; /* Torna o item não interativo */
+}
+
+/* Linha separadora no menu dropdown */
+.navbar .dropdown-divider {
+  border-color: #6c757d; /* Linha cinza */
+}
+
+/* Estilo para o rodapé fixo */
+footer {
+  height: 62px; /* Altura fixa do rodapé */
+  background-color: #343a40; /* Fundo escuro */
+  color: #fff; /* Texto branco */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  display: flex;
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+footer p {
+  padding: 18px 0; /* Espaçamento interno vertical do texto */
+}
+
+/* Ajustes responsivos para telas menores */
+@media (max-width: 768px) {
+  .modal-body .btn {
+    width: 100%; /* Botões ocupam toda a largura */
+    margin-bottom: 10px; /* Espaçamento entre botões */
+  }
+
+  .modal-body form {
+    margin-top: 20px; /* Espaçamento acima do formulário */
+  }
+
+  .navbar-brand img {
+    width: 150px; /* Ajusta a largura do logo */
+    height: auto; /* Mantém proporção */
+  }
+
+  .navbar {
+    flex-wrap: wrap; /* Permite quebra de linha na navbar */
+    justify-content: center; /* Centraliza os itens da navbar */
+  }
+
+  .dropdown-menu {
+    text-align: center; /* Centraliza os itens do menu dropdown */
+  }
+
+  .btn {
+    font-size: 14px; /* Tamanho menor para botões */
+    padding: 8px 12px; /* Ajuste no espaçamento interno */
+    margin-bottom: 5px; /* Espaçamento entre botões */
+  }
+
+  .modal-dialog {
+    max-width: 90%; /* Reduz a largura máxima dos modais */
+    margin: 10px auto; /* Centraliza horizontalmente */
+  }
+
+  .modal-header {
+    justify-content: center; /* Centraliza o título do modal */
+  }
+
+  .modal-body {
+    padding: 10px; /* Reduz o espaçamento interno do modal */
+  }
+
+  form {
+    font-size: 14px; /* Fonte menor para formulários */
+  }
+
+  form input[type="submit"], 
+  form button {
+    width: 100%; /* Botões de formulário ocupam toda a largura */
+    margin-top: 10px; /* Espaçamento acima dos botões */
+  }
+
+  .dropdown-toggle {
+    width: 100%; /* Botão dropdown ocupa toda a largura */
+  }
+
+  table {
+    width: 100%; /* Tabelas ocupam toda a largura */
+    margin-top: 10px; /* Espaçamento acima da tabela */
+  }
+
+  select, 
+  input[type="text"], 
+  .form-control {
+    font-size: 14px; /* Fonte menor em inputs */
+    margin-top: 10px; /* Espaçamento acima dos inputs */
+  }
+
+  footer p {
+    font-size: 16px; /* Fonte menor para o texto do rodapé */
+  }
+}

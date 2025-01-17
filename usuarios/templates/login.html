@@ -1,47 +1,70 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+{% load static %} 
 
-{% block 'titulo' %} Login {% endblock %}
+{% block 'head' %}
+<!-- Inclui o arquivo CSS específico para a página de login de usuários -->
+<link rel="stylesheet" href="{% static 'css/usuarios.css'%}">
+{% endblock 'head' %}
 
-{% block 'conteudo' %}
+{% block 'titulo' %} Login {% endblock %} <!-- Define o título da página como 'Login' -->
 
-<div class="container">
-    <br>
+{% block 'conteudo' %} <!-- Bloco de conteúdo da página -->
 
+<div class="container-fluid">
+    <!-- Exibe mensagens de erro dependendo do valor de 'status' -->
     {% if status == '1' %}
     <div class="alert alert-danger" role="alert">
         Email ou senha inválidos!
     </div>
     {% endif %}
-
     {% if status == '2' %}
     <div class="alert alert-danger" role="alert">
         Faça login antes de tentar acessar o sistema!
     </div>
     {% endif %}
 
+    <!-- Layout com duas colunas para o formulário de login e a imagem ilustrativa -->
     <div class="row">
-        <div class="col-md-3"></div>
-
-        <div class="col-md">
-            <h1>Login</h1>
-            <hr>
-
-            <form method="POST" action="{% url 'validar_login' %}"> {% csrf_token %}
+        <!-- Coluna esquerda: Formulário de login -->
+        <div class="col-md-6 col-12 d-flex justify-content-center">
+            <div class="cont-cadastro">
+                <!-- Título do formulário de login -->
+                <h2 class="mb-4 text-center">Login</h2>
                 
-                <label>Email</label>
-                <input name="email" class="form-control" type="text" placeholder="Email...">
-                <br>
-                <label>Senha</label>
-                <input name="senha" class="form-control" type="password" placeholder="Senha...">
-                <br>
-
-                <input class="btn btn-info btn-lg" type="submit" value="Enviar">
-                <a href="{% url 'cadastro' %}" class="btn btn-warning btn-lg">Cadastro</a>
-            </form>
+                <!-- Formulário para autenticação do usuário -->
+                <form method="POST" action="{% url 'validar_login' %}">
+                    {% csrf_token %} <!-- Token CSRF para proteger contra ataques -->
+                    
+                    <!-- Campo para inserção de email -->
+                    <div class="mb-4">
+                        <label>Email</label>
+                        <input name="email" class="form-control" type="text" placeholder="Email...">
+                    </div>
+                    
+                    <!-- Campo para inserção de senha -->
+                    <div class="mb-4">
+                        <label>Senha</label>
+                        <input name="senha" class="form-control" type="password" placeholder="Senha...">
+                    </div>
+                    
+                    <!-- Botões de envio do formulário e link para cadastro -->
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <!-- Botão para enviar o formulário de login -->
+                        <input class="btn btn-info" type="submit" value="Enviar">
+                        
+                        <!-- Link para a página de cadastro caso o usuário ainda não tenha conta -->
+                        <a href="{% url 'cadastro' %}" class="btn btn-warning">Cadastro</a>
+                    </div>
+                </form>
+            </div>
         </div>
 
-        <div class="col-md-3"></div>
+        <!-- Coluna direita: Exibe uma imagem ilustrativa -->
+        <div class="col-md-6 col-12 bg-main d-flex justify-content-center align-items-center">
+            <img src="{% static 'imagens/ilustracao0.png' %}" alt="Ilustração" class="img-fluid">
+        </div>
     </div>
+
 </div>
 
-{% endblock %}
+{% endblock %} 

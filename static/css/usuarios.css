@@ -1,0 +1,88 @@
+/* Remove margens e paddings padrões do HTML e do corpo, garantindo um layout consistente */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Define largura total */
+    height: 100%; /* Define altura total */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo do tamanho */
+}
+
+/* Estilo do contêiner principal */
+.container-fluid {
+    display: flex; /* Ativa o Flexbox para organização */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+}
+
+/* Configuração da linha principal */
+.row {
+    flex: 1; /* Faz com que a linha ocupe todo o espaço restante */
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Centraliza o formulário dentro de uma coluna específica */
+.col-md-6.col-12.d-flex.justify-content-center {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: auto; /* Altura ajustada ao conteúdo */
+}
+
+/* Configurações específicas do formulário */
+.cont-cadastro {
+    max-width: 400px; /* Define uma largura máxima para o formulário */
+    width: 100%; /* Garante que o formulário seja responsivo */
+    margin: auto; /* Centraliza horizontalmente dentro do contêiner */
+}
+
+/* Estilo para os rótulos do formulário */
+label {
+    font-weight: 500; /* Deixa o texto levemente em negrito */
+}
+
+/* Espaçamento entre elementos com classes específicas */
+.d-flex.justify-content-center.gap-3.mt-4 > * {
+    margin-right: 10px; /* Adiciona espaçamento entre os elementos */
+}
+
+.d-flex.justify-content-center.gap-3.mt-4 > *:last-child {
+    margin-right: 0; /* Remove o espaçamento do último elemento */
+}
+
+/* Ajusta o tamanho e proporção das imagens no contêiner da coluna direita */
+.bg-main img {
+    width: 81.1%; /* Define a largura relativa da imagem */
+    height: auto; /* Mantém a proporção original */
+    max-height: 50%; /* Limita a altura máxima da imagem */
+    object-fit: contain; /* Ajusta a imagem para caber no espaço sem cortes */
+}
+
+.bg-main2 img {
+    width: 65.6%; /* Define a largura relativa da imagem */
+    height: auto; /* Mantém a proporção original */
+    max-height: 50%; /* Limita a altura máxima da imagem */
+    object-fit: contain; /* Ajusta a imagem para caber no espaço sem cortes */
+}
+
+/* Estilos para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+    /* Altera os botões para se organizarem em coluna */
+    .d-flex.justify-content-center.gap-3.mt-4 {
+        flex-direction: column; /* Organiza os botões verticalmente */
+        align-items: center; /* Centraliza os botões horizontalmente */
+        gap: 10px; /* Adiciona espaçamento vertical entre os botões */
+    }
+
+    /* Configuração para botões responsivos */
+    .d-flex.justify-content-center.gap-3.mt-4 .btn {
+        width: 100%; /* Faz com que os botões ocupem toda a largura disponível */
+        margin: 0 auto; /* Centraliza os botões dentro do contêiner */
+    }
+
+    /* Adiciona um espaçamento superior à imagem para telas menores */
+    .bg-main img {
+        margin-top: 20px; /* Ajusta o espaço acima da imagem */
+    }
+}

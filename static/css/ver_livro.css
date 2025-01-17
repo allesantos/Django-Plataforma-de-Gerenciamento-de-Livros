@@ -1,0 +1,97 @@
+/* Estilização do contêiner principal que engloba a imagem e o formulário */
+.form-wrapper {
+  display: flex; /* Ativa o Flexbox para layout flexível */
+  justify-content: space-between; /* Espaça uniformemente os elementos */
+  align-items: flex-start; /* Alinha as colunas pelo topo */
+  gap: 100px; /* Define o espaço horizontal entre as colunas */
+}
+
+/* Configurações para a coluna da imagem */
+.image-column {
+  flex: 1; /* Define tamanho proporcional menor comparado ao formulário */
+  max-width: 40%; /* Limita a largura máxima da coluna */
+  text-align: center; /* Centraliza o conteúdo da coluna */
+}
+
+/* Configurações para a coluna do formulário */
+.form-column {
+  flex: 2; /* Define tamanho proporcional maior comparado à imagem */
+  max-width: 60%; /* Limita a largura máxima da coluna */
+}
+
+/* Estilo da imagem de capa */
+.book-cover {
+  width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Arredonda os cantos da imagem */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra leve */
+}
+
+/* Estilização responsiva para telas menores */
+@media (max-width: 768px) {
+
+  /* Ajusta os controles do formulário para telas pequenas */
+  .form-control {
+      font-size: 1rem !important; /* Define tamanho da fonte consistente */
+      text-align: center; /* Centraliza o texto */
+  }
+
+  /* Ajusta fontes e estilos gerais do formulário em telas menores */
+  label,
+  input,
+  textarea,
+  select,
+  button {
+      font-size: 1.1rem; /* Aumenta o tamanho da fonte para melhor legibilidade */
+      font-weight: 700; /* Destaca o texto com negrito */
+      color: #444; /* Define cor para contraste adequado */
+  }
+
+  /* Altera a estrutura do layout em dispositivos menores */
+  .form-wrapper {
+      flex-direction: column; /* Organiza os elementos verticalmente */
+      align-items: center; /* Centraliza os elementos horizontalmente */
+      gap: 20px; /* Reduz o espaço entre as colunas */
+  }
+
+  /* Configurações para a coluna da imagem em telas pequenas */
+  .image-column,
+  .form-column {
+      max-width: 100%; /* Faz cada coluna ocupar toda a largura disponível */
+      text-align: center; /* Centraliza o texto */
+      margin-bottom: 30px; /* Adiciona espaço inferior para separação */
+  }
+
+  /* Ajusta o espaçamento interno na coluna do formulário */
+  .form-column {
+      padding: 0 20px; /* Adiciona padding horizontal */
+  }
+
+  /* Ajusta o tamanho da imagem em telas menores */
+  .book-cover {
+      max-width: 80%; /* Reduz a largura máxima da imagem */
+  }
+
+  /* Configurações para centralizar o conteúdo em telas pequenas */
+  .container {
+      display: flex; /* Ativa o Flexbox */
+      flex-direction: column; /* Organiza o conteúdo verticalmente */
+      align-items: center; /* Centraliza horizontalmente */
+      justify-content: center; /* Centraliza verticalmente */
+  }
+
+  /* Ajusta o tamanho da fonte geral em telas menores */
+  body, .form-column h1, .form-column p, .image-column p {
+      font-size: 1.1em; /* Aumenta levemente o tamanho da fonte */
+  }
+
+  /* Oculta elementos desnecessários em telas pequenas */
+  .historico-emprestimo {
+      display: none; /* Esconde a tabela de histórico de empréstimos */
+  }
+
+  /* Oculta o título relacionado ao histórico de empréstimos */
+  h2 {
+      display: none; /* Esconde o título em telas pequenas */
+  }
+}

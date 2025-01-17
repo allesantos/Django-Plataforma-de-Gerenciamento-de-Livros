@@ -1,0 +1,119 @@
+/* Importa a fonte personalizada "Noto Sans Display" para o projeto */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilo para o cabeçalho de boas-vindas */
+.welcome-heading {
+    font-family: 'Noto Sans Display', serif; /* Define a fonte personalizada */
+    font-weight: 700; /* Texto em negrito */
+    font-size: 30px; /* Tamanho do texto */
+    margin-bottom: 40px; /* Espaçamento inferior */
+    color: #0d6efd; /* Cor azul primária */
+}
+
+/* Configuração para o container de cards */
+.card-container {
+    margin: 38px; /* Espaçamento ao redor de cada card */
+    flex: 0 0 18%; /* Define a largura relativa de cada card (5 por linha) */
+    max-width: 18%; /* Largura máxima de cada card */
+}
+
+/* Estilo para os cards */
+.card {
+    margin-bottom: 20px; /* Espaçamento inferior entre os cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave ao passar o mouse */
+    width: 16rem !important; /* Define largura fixa para os cards */
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: space-between; /* Espaça uniformemente os elementos internos */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura total */
+}
+
+/* Configuração para imagens dentro dos cards */
+.card img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do card */
+    height: auto; /* Mantém a proporção original da imagem */
+    margin-bottom: 15px; /* Espaçamento inferior entre a imagem e o texto */
+}
+
+/* Estilo para o corpo do card */
+.card-body {
+    display: flex; /* Usa Flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 10px; /* Espaçamento entre os elementos internos */
+    width: 100%; /* Garante que o conteúdo ocupe toda a largura disponível */
+}
+
+/* Estilo para o título e subtítulo do card */
+.card-title, 
+.card-subtitle {
+    margin: 0; /* Remove margens padrão */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para os links ou botões dentro do card */
+.card a {
+    display: inline-block; /* Trata o botão como um elemento de bloco */
+    text-align: center; /* Centraliza o texto no botão */
+    width: 100%; /* Ocupa toda a largura disponível */
+    margin-top: -20px; /* Ajusta o espaçamento superior */
+}
+
+/* Estilo para o hover nos cards */
+.card:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais destacada */
+}
+
+/* Estilos responsivos para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+    /* Ajustes para o cabeçalho de boas-vindas */
+    .welcome-heading {
+        font-size: 28px; /* Reduz o tamanho do texto */
+        text-align: center; /* Centraliza o texto */
+        margin-bottom: 20px; /* Reduz o espaçamento inferior */
+    }
+
+    /* Configuração da linha de cards para telas menores */
+    .row {
+        display: flex !important; /* Garante o uso do Flexbox */
+        flex-wrap: wrap; /* Permite que os cards quebrem linha */
+        justify-content: center !important; /* Centraliza os cards */
+    }
+
+    /* Ajusta o tamanho dos cards para caberem 2 por linha */
+    .card-container {
+        flex: 0 0 48%; /* Define a largura relativa */
+        max-width: 48%; /* Largura máxima para caber 2 por linha */
+        margin: 10px; /* Reduz o espaçamento ao redor dos cards */
+    }
+
+    /* Cards ocupam toda a largura disponível */
+    .card {
+        width: 100% !important; /* Ajusta a largura para o container */
+    }
+}
+
+/* Estilos responsivos para dispositivos com largura máxima de 480px */
+@media (max-width: 480px) {
+    /* Configuração da linha de cards para telas muito pequenas */
+    .row {
+        display: flex !important; /* Garante o uso do Flexbox */
+        flex-wrap: wrap; /* Permite quebra de linha nos cards */
+        justify-content: center !important; /* Centraliza os cards */
+    }
+
+    /* Ajusta os cards para ocuparem 100% da largura (1 por linha) */
+    .card-container {
+        flex: 0 0 100%; /* Um card por linha */
+        max-width: 100%; /* Largura máxima de 100% */
+    }
+
+    /* Ajusta o espaçamento inferior dos cards */
+    .card {
+        margin-bottom: 15px; /* Reduz o espaçamento inferior */
+    }
+}
