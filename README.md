@@ -2,6 +2,8 @@
  
 Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com Django. 
 
+---
+
 ## Índice
 - [Descrição](#Descrição)
 - [Recursos](#Recursos)
@@ -12,8 +14,12 @@ Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com
 - [Contribuição](#Contribuição)
 - [Licença](#Licença)
 
+---
+
 ## Descrição
 **Casa dos Livros** é uma plataforma que permite que os usuários se cadastrem, façam login e publiquem informações sobre os livros que possuem. Além disso, os usuários podem emprestar seus livros fisicamente para outros usuários cadastrados ou visitantes, registrar devoluções e avaliar o estado dos livros devolvidos.
+
+---
 
 ## Recursos
 - Cadastro e login de usuários.
@@ -22,10 +28,14 @@ Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com
 - Registro de devoluções com avaliação do estado do livro.
 - Interface amigável e responsiva.
 
+---
+
 ## Tecnologias
 - __Backend:__ Django 5.x
 - __Banco de Dados:__ SQLite (padrão)
 - __Frontend:__ HTML, CSS, Bootstrap e JavaScript
+
+---
 
 ## Pré-requisitos
 Antes de iniciar, certifique-se de ter os seguintes itens instalados:
@@ -33,6 +43,8 @@ Antes de iniciar, certifique-se de ter os seguintes itens instalados:
 - pip (gerenciador de pacotes do Python)
 - Virtualenv (recomendado para isolamento do ambiente)
 - Git
+
+---
 
 ## Uso
 1. Na imagem abaixo, temos uma representação da tela inicial do projeto.
@@ -77,6 +89,8 @@ Note que não será possível avaliar a devolução de um livro caso o usuário 
 
 <img src = "https://github.com/allesantos/allesantos/blob/main/imagens/Biblioteca-Django/11.png">
 
+---
+
 ## Instalação
 1. Clone o repositório para sua máquina local:
 
@@ -112,6 +126,8 @@ Note que não será possível avaliar a devolução de um livro caso o usuário 
 
 6. Acesse o sistema em http://127.0.0.1:8000/ no seu navegador.
 
+---
+
 ## Contribuição
 Sinta-se à vontade para contribuir com este projeto. Siga estas etapas:
 
@@ -131,6 +147,9 @@ Sinta-se à vontade para contribuir com este projeto. Siga estas etapas:
 
 4. Abra um Pull Request.
 
-## Licença
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais informações.
+---
 
+## Licença
+Este projeto está licenciado sob a **MIT License** – veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+📌 Desenvolvido com ❤️ por Alexandre Santos
