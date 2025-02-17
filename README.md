@@ -1,27 +1,27 @@
-# Casa dos Livros - Plataforma de Gerenciamento de Livros
+# 📌 Casa dos Livros - Plataforma de Gerenciamento de Livros
  
 Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com Django. 
 
 ---
 
-## Índice
-- [Descrição](#Descrição)
-- [Recursos](#Recursos)
-- [Tecnologias Utilizadas](#Tecnologias)
-- [Pré-requisitos](#Pré-requisitos)
-- [Uso](#Uso)
-- [Instalação](#Instalação)
-- [Contribuição](#Contribuição)
-- [Licença](#Licença)
+## 📌 Índice
+- [📜 Descrição](#-descrição)
+- [🚀 Recursos](#-recursos)
+- [🛠 Tecnologias](#-tecnologias)
+- [✅ Pré-requisitos](#-pré-requisitos)
+- [▶️ Uso](#-uso)
+- [💾 Instalação](#-instalação)
+- [🤝 Contribuição](#-contribuição)
+- [📄 Licença](#-licença)
 
 ---
 
-## Descrição
+## 📌 Descrição  
 **Casa dos Livros** é uma plataforma que permite que os usuários se cadastrem, façam login e publiquem informações sobre os livros que possuem. Além disso, os usuários podem emprestar seus livros fisicamente para outros usuários cadastrados ou visitantes, registrar devoluções e avaliar o estado dos livros devolvidos.
 
 ---
 
-## Recursos
+## 🚀 Recursos
 - Cadastro e login de usuários.
 - Publicação de informações sobre livros.
 - Empréstimo de livros para outros usuários ou visitantes.
@@ -30,14 +30,14 @@ Este é um projeto de uma plataforma de gerenciamento de livros desenvolvida com
 
 ---
 
-## Tecnologias
+## 🛠 Tecnologias
 - __Backend:__ Django 5.x
 - __Banco de Dados:__ SQLite (padrão)
 - __Frontend:__ HTML, CSS, Bootstrap e JavaScript
 
 ---
 
-## Pré-requisitos
+## 📌 Pré-requisitos
 Antes de iniciar, certifique-se de ter os seguintes itens instalados:
 - Python 3.8 ou superior
 - pip (gerenciador de pacotes do Python)
@@ -46,7 +46,7 @@ Antes de iniciar, certifique-se de ter os seguintes itens instalados:
 
 ---
 
-## Uso
+## 💻 Uso  
 1. Na imagem abaixo, temos uma representação da tela inicial do projeto.
 
 <img src = "https://github.com/allesantos/allesantos/blob/main/imagens/Biblioteca-Django/01.png">
@@ -91,7 +91,7 @@ Note que não será possível avaliar a devolução de um livro caso o usuário 
 
 ---
 
-## Instalação
+## 🔧 Instalação
 1. Clone o repositório para sua máquina local:
 
     ```
@@ -128,7 +128,7 @@ Note que não será possível avaliar a devolução de um livro caso o usuário 
 
 ---
 
-## Contribuição
+## 🤝 Contribuição
 Sinta-se à vontade para contribuir com este projeto. Siga estas etapas:
 
 1. Faça um fork do repositório.
@@ -149,7 +149,7 @@ Sinta-se à vontade para contribuir com este projeto. Siga estas etapas:
 
 ---
 
-## Licença
+## 📜 Licença
 Este projeto está licenciado sob a **MIT License** – veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 📌 Desenvolvido com ❤️ por Alexandre Santos
